@@ -2,8 +2,8 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1A1A1A; /* Dark gray background */
-    color: #FFFFFF; /* White text */
+    background-color: #1A1A1A;
+    color: #FFFFFF;
     line-height: 1.6;
 }
 
@@ -22,7 +22,7 @@ header {
 }
 
 .logo img {
-    height: 50px;
+    height: 50px; /* Default for desktop */
     margin-left: 2em;
     transition: transform 0.3s ease;
 }
@@ -149,7 +149,7 @@ section {
 .contact-form {
     max-width: 600px;
     margin: 2em auto;
-    background: rgba(96, 96, 96, 0.1); /* Glassmorphism */
+    background: rgba(96, 96, 96, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 2em;
@@ -186,7 +186,7 @@ section {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: #A0A0A0; /* Light gray placeholder */
+    color: #A0A0A0;
 }
 
 button {
@@ -205,56 +205,17 @@ button:hover {
     transform: scale(1.05);
 }
 
-footer {
-    background-color: #404040;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 1.5em;
-    position: relative;
-    width: 100%;
-    font-size: 0.9em;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        padding: 1em 0;
-    }
-
-    .logo img {
-        margin-left: 0;
-        margin-bottom: 1em;
-    }
-
-    nav {
-        margin-right: 0;
-    }
-
-    .service-item {
-        width: 80%;
-    }
-
-    #home h2 {
-        font-size: 2em;
-    }
-
-    .contact-form {
-        padding: 1.5em;
-    }
-}
-
 #thanks {
-    padding: 8em 2em; /* Extra padding to center vertically */
-    background: linear-gradient(135deg, #404040, #2A2A2A); /* Matching gradient */
-    min-height: 100vh; /* Full height for a standalone page */
+    padding: 8em 2em;
+    background: linear-gradient(135deg, #404040, #2A2A2A);
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .thanks-container {
-    background: rgba(96, 96, 96, 0.1); /* Glassmorphism */
+    background: rgba(96, 96, 96, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 3em;
@@ -303,13 +264,120 @@ footer {
     transform: scale(1.05);
 }
 
-/* Responsive adjustments */
+footer {
+    background-color: #404040;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1.5em;
+    position: relative;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1em 0;
+    }
+
+    .logo img {
+        height: 40px; /* Smaller logo for tablets */
+        margin-left: 0;
+        margin-bottom: 1em;
+    }
+
+    nav {
+        margin-right: 0;
+    }
+
+    nav ul li {
+        margin: 0 1em; /* Tighter spacing */
+    }
+
+    section {
+        padding: 3em 1em; /* Less padding on sides */
+    }
+
+    #home {
+        margin-top: 5em; /* Adjust for smaller header */
+        padding: 2em 1em;
+    }
+
+    #home h2 {
+        font-size: 2em;
+    }
+
+    #home p {
+        font-size: 0.9em;
+        padding: 0 0.5em; /* Prevent text overflow */
+    }
+
+    .service-item {
+        width: 100%; /* Full width on tablets */
+        max-width: 350px; /* Cap width */
+        margin: 0 auto; /* Center items */
+    }
+
+    .contact-form {
+        padding: 1.5em;
+    }
+
     #thanks {
         padding: 6em 1em;
     }
 
     .thanks-container h2 {
         font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) { /* Phones */
+    .logo img {
+        height: 30px; /* Even smaller for phones */
+    }
+
+    nav ul li {
+        margin: 0 0.5em; /* Tighter nav spacing */
+        font-size: 0.9em; /* Smaller nav text */
+    }
+
+    #home {
+        margin-top: 4em; /* Smaller header offset */
+    }
+
+    #home h2 {
+        font-size: 1.5em;
+    }
+
+    #home p {
+        font-size: 0.85em;
+    }
+
+    section {
+        padding: 2em 0.5em; /* Minimal padding */
+    }
+
+    .service-container {
+        gap: 1.5em; /* Smaller gap */
+    }
+
+    .contact-form {
+        padding: 1em;
+        margin: 1em 0.5em; /* Fit within screen */
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9em; /* Smaller inputs */
+    }
+
+    button {
+        padding: 0.6em 1.5em; /* Smaller button */
+    }
+
+    footer {
+        font-size: 0.8em;
+        padding: 1em;
     }
 }
