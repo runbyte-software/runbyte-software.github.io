@@ -5,7 +5,7 @@ body {
     background-color: #1A1A1A;
     color: #FFFFFF;
     line-height: 1.6;
-    overflow-x: hidden; /* Prevent horizontal overflow globally */
+    overflow-x: hidden;
 }
 
 header {
@@ -155,7 +155,7 @@ section {
     background: rgba(96, 96, 96, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    padding: 2em; /* Symmetrical padding for desktop */
+    padding: 1.5em; /* Symmetrical for desktop */
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-sizing: border-box;
@@ -163,12 +163,12 @@ section {
 
 .form-group {
     margin-bottom: 1.5em;
-    padding: 0 0.5em; /* Add padding to balance input spacing */
+    padding: 0 0.5em;
 }
 
 .form-group input,
 .form-group textarea {
-    width: 100%;
+    width: calc(100% - 1em); /* Adjust for padding */
     padding: 0.8em;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -326,7 +326,7 @@ footer {
     }
 
     .contact-form {
-        max-width: 500px; /* Slightly smaller for tablets */
+        max-width: 500px;
         padding: 1em;
         margin: 1em auto;
     }
@@ -371,9 +371,9 @@ footer {
     }
 
     .contact-form {
-        max-width: 340px; /* Fixed width for small screens */
+        max-width: 320px; /* Fit smallest phones */
         width: 100%;
-        padding: 0.5em;
+        padding: 0.25em; /* Minimal padding */
         margin: 0.5em auto;
     }
 
