@@ -144,16 +144,17 @@ section {
     background: linear-gradient(135deg, #000000, #1A1A1A);
     color: #FFFFFF;
     padding: 4em 2em;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .contact-form {
     max-width: 600px;
-    width: 100%; /* Ensure it respects viewport */
+    width: 100%;
     margin: 2em auto;
     background: rgba(96, 96, 96, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    padding: 2em 1.5em; /* Balanced left/right padding */
+    padding: 2em 1.5em; /* Balanced for desktop */
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-sizing: border-box;
@@ -322,10 +323,10 @@ footer {
     }
 
     .contact-form {
-        width: 90%; /* Slightly less than full width */
-        max-width: none; /* Remove max-width constraint */
+        width: 90%;
+        max-width: none;
         padding: 1em;
-        margin: 1em auto; /* Center with minimal margin */
+        margin: 1em auto;
     }
 
     #thanks {
@@ -368,10 +369,10 @@ footer {
     }
 
     .contact-form {
-        width: 95%; /* Almost full width but with breathing room */
+        width: 90%;
         max-width: none;
-        padding: 0.75em;
-        margin: 0.5em auto;
+        padding: 0.5em; /* Tighter padding */
+        margin: 0.5em 0; /* No side margins */
     }
 
     .form-group input,
