@@ -22,7 +22,7 @@ header {
 }
 
 .logo img {
-    height: 50px; /* Default for desktop */
+    height: 50px;
     margin-left: 2em;
     transition: transform 0.3s ease;
 }
@@ -155,6 +155,7 @@ section {
     padding: 2em;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
 }
 
 .form-group {
@@ -282,7 +283,7 @@ footer {
     }
 
     .logo img {
-        height: 40px; /* Smaller logo for tablets */
+        height: 40px;
         margin-left: 0;
         margin-bottom: 1em;
     }
@@ -292,15 +293,15 @@ footer {
     }
 
     nav ul li {
-        margin: 0 1em; /* Tighter spacing */
+        margin: 0 1em;
     }
 
     section {
-        padding: 3em 1em; /* Less padding on sides */
+        padding: 3em 1em;
     }
 
     #home {
-        margin-top: 5em; /* Adjust for smaller header */
+        margin-top: 5em;
         padding: 2em 1em;
     }
 
@@ -310,17 +311,19 @@ footer {
 
     #home p {
         font-size: 0.9em;
-        padding: 0 0.5em; /* Prevent text overflow */
+        padding: 0 0.5em;
     }
 
     .service-item {
-        width: 100%; /* Full width on tablets */
-        max-width: 350px; /* Cap width */
-        margin: 0 auto; /* Center items */
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
     }
 
     .contact-form {
+        max-width: 100%;
         padding: 1.5em;
+        margin: 1em 1em;
     }
 
     #thanks {
@@ -332,18 +335,18 @@ footer {
     }
 }
 
-@media (max-width: 480px) { /* Phones */
+@media (max-width: 480px) {
     .logo img {
-        height: 30px; /* Even smaller for phones */
+        height: 30px;
     }
 
     nav ul li {
-        margin: 0 0.5em; /* Tighter nav spacing */
-        font-size: 0.9em; /* Smaller nav text */
+        margin: 0 0.5em;
+        font-size: 0.9em;
     }
 
     #home {
-        margin-top: 4em; /* Smaller header offset */
+        margin-top: 4em;
     }
 
     #home h2 {
@@ -355,25 +358,26 @@ footer {
     }
 
     section {
-        padding: 2em 0.5em; /* Minimal padding */
+        padding: 2em 0.5em;
     }
 
     .service-container {
-        gap: 1.5em; /* Smaller gap */
+        gap: 1.5em;
     }
 
     .contact-form {
+        max-width: 100%;
         padding: 1em;
-        margin: 1em 0.5em; /* Fit within screen */
+        margin: 1em 0.5em;
     }
 
     .form-group input,
     .form-group textarea {
-        font-size: 0.9em; /* Smaller inputs */
+        font-size: 0.9em;
     }
 
     button {
-        padding: 0.6em 1.5em; /* Smaller button */
+        padding: 0.6em 1.5em;
     }
 
     footer {
